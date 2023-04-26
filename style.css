@@ -1,0 +1,263 @@
+@import url(https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap);
+
+*{
+    font-family: "Comfortaa", cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: none;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+body{
+    background-color: black;
+}
+
+.container{
+    padding-top: 10rem;
+}
+
+section{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 2rem;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg, transparent, black) ;
+    z-index: 1000;
+}
+
+.header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+}
+
+.header .flex .logo{
+    font-size: 2.5rem;
+    color: #ff0;
+}
+
+.header .flex .navbar a{
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+    color: rgba(255,255,255,.5);
+}
+
+#menu-btn{
+    font-size:2.5rem;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+
+.home{
+    background: url('../img/city.jpg') no-repeat rgba(0,0,0,.5);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+} 
+
+.home .flex{
+    min-height: calc(100vh - 10rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.home .flex form{
+    background-color: rgba(255,255,255,.1);
+    border-radius: .5rem;
+    padding: 2rem;
+    width: 50rem;
+    backdrop-filter: blur(.4rem);
+    z-index: 1000;
+}
+
+.home .flex form h3{
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    padding-bottom: 1rem ;
+
+}
+.home .flex form .box{
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1.4rem;
+    font-size: 1.8rem;
+    color: white;
+    text-transform: none;
+    background: rgba(255,255,255,.5);
+    margin: 1rem 0;
+
+}
+.home .flex form .box::placeholder{
+    color: white;
+}
+
+
+.main{
+    background: url('../img/city.jpg') no-repeat rgba(0,0,0,.5);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+} 
+
+.main .details{
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem;
+    
+}
+
+.main .details .box{
+    width: 100rem;
+    background-color: rgba(0,0,0,.5);
+    padding: 3rem 2rem;
+    text-align: center;
+    backdrop-filter: blur(.4rem);
+    min-height: 40vh;
+    border-radius: .5rem;
+}
+
+.main .details .box h3{
+    line-height: 2;
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.main .details .box p{
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color:  rgba(255,255,255,.9);
+    line-height: 2;
+}
+
+.main .details .box .btn{
+    display: inline-block;
+    width: auto;
+}
+
+.main .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.main .grid .box{
+    background-color: rgba(0,0,0,.5);
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(.4rem);
+    border-radius: .5rem;
+    height: 20rem;
+
+}   
+
+.main .grid .box h3{
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: white;
+}
+
+.main .grid .box p{
+    line-height: 2;
+    font-size: 1.6rem;
+    color: rgba(255,255,255,.9);
+}
+.btn{
+    display: block;
+    border-radius: .5rem;
+    padding: 1rem 3rem;
+    background: #ff0;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
+
+
+
+
+/* .home .flex form .box::pl */
+
+
+
+
+/* adaptive interface */
+@media (max-width: 991px){
+    html{
+        font-size:55%;
+    }
+}
+
+@media (max-width: 768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .flex{
+        position: relative;
+    }
+
+    .header .flex .navbar{
+        position: absolute; 
+        top: 100%;
+        left: 2rem;
+        right: 2rem;
+        background-color: rgba(255,255,255,.5);
+        backdrop-filter: blur(.4rem);
+        border-radius: .5rem;
+        transform: scale(0);
+        transform-origin: top right;
+        transition: .2s linear;
+
+    
+    }
+
+    .header .flex .navbar.active{
+        transform: scale(1);
+    }
+
+    .header .flex .navbar a{
+        display: block;
+        padding: .5rem 1.5rem;
+        margin: 1.5rem .5rem;
+        color: white;
+        border-radius: .5rem;
+    }
+    
+
+    .header .flex .navbar a:hover{
+        background-color:  rgba(255,255,255,.5);
+    }
+
+}
