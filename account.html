@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name = "viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Account</title>
 
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
@@ -35,12 +35,85 @@
 
 </header>
 
-<div class="container home">
+<div class="container home ">
 
-    <section class="flex">
+    <section class="flex ">
 
-        <form action="" method="post">
-            <h3>Рассказать о проблеме </h3>
+        <form action="" method="post" class="account">
+            <div class = "content"><h3>Добро пожаловать</h3>
+            
+            </div>
+
+            <div class = "logreg-box">
+                <div class="form-box login">
+                    
+                        <h2>Войти</h2>
+                        <div class="input-box">
+                            <span class="icon"><i class="fa-solid fa-envelope fa-2xl"></i></span>
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class="fa-solid fa-lock fa-2xl"></i></span>
+                            <input type="password" required>
+                            <label>Пароль</label>
+                        </div>
+
+                        <div class="remember-forgot">
+                            <label><input type="checkbox"> Запомнить меня </label>
+
+                        </div>
+
+                        <button type="submit" class="btn">Войти</button>
+
+                        <div class="login-register">
+                            <p>У меня нет аккаунта. <a href="#" class="register-link">Регистрация</a></p>
+
+                        </div>
+
+                    
+        
+                </div>
+                <div class="form-box register">
+                    
+                        <h2>Регистрация</h2>
+
+                        <div class="input-box">
+                            <span class="icon"><i class="fa-solid fa-user fa-2xl"></i></span>
+                            <input type="text" required>
+                            <label>Имя</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><i class="fa-solid fa-envelope fa-2xl"></i></span>
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class="fa-solid fa-lock fa-2xl"></i></span>
+                            <input type="password" required>
+                            <label>Пароль</label>
+                        </div>
+
+                        <div class="remember-forgot">
+                            <label><input type="checkbox"> Запомнить меня </label>
+
+                        </div>
+
+                        <button type="submit" class="btn">Войти</button>
+
+                        <div class="login-register">
+                            <p>У меня есть аккаунт <a href="#" class="login-link">Войти</a></p>
+
+                        </div>
+                    
+                </div>
+            </div>
+
+
+            
+            <!-- <h3>Рассказать о проблеме </h3>
             <input type="name" name="name_solutions" required maxlength="50"
             placeholder="Введите название проблемы" class="box">
             <input type="discraption" name="discraption" placeholder="Введите описание">
@@ -49,7 +122,7 @@
             <input type="photo" name="photo" required maxlength="50"
             placeholder="Загрузите фото" class="box">
             <input type="submit" value="Отправить" name="send" class="btn">
-            
+             -->
         </form>
 
     </section>
